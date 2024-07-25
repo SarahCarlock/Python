@@ -1,0 +1,75 @@
+Question 1
+Determine the truth value of the following expression:
+Code
+
+ 3 ** 2 + 1 != 30 / 3
+
+    False
+
+Question 2
+Read the following code carefully. What will happen when the code is executed?
+Code
+
+x = 0
+
+if x = 0:
+  print("x is equal to zero")
+elif x >= 0:
+  print("x is greater than zero")
+else:
+  print("x is less than zero")
+
+    There will be a SyntaxError
+
+Question 3
+Determine the truth value of the following expression:
+Code
+
+(9 - 4) * 2 == 77 / 7 - 1
+
+    True
+
+Question 4
+Determine the truth value of the following expression:
+Code
+
+(4 <= 2 * 3) and (7 + 1 == 8)
+
+    True
+
+Question 5
+Determine the truth value of the following expression:
+Code
+
+4 * 5 <= 21 - 1
+
+    True
+
+Question 6
+Which of the following variables contains a Boolean value?
+
+    my_cool_variable = 7+8 ! 13
+Because the expression on the right includes a relational operator, we can see that it must be True or False, making it a Boolean variable.
+
+Question 7
+Which of the following is a Boolean expression?
+
+    My name is Angelo.
+
+Question 8
+Consider the code below; what would this print to the terminal?
+Code
+
+x = 5
+
+if x <= 2:
+  print("This is printed")
+if x <= 4:
+  print("This is also printed")
+if x <= 6:
+  print("Is this printed?")
+if x <= 8:
+  print("This might be printed.")
+
+    Is this printed?
+    This might be printed.

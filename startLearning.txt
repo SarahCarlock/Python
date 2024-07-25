@@ -107,3 +107,6 @@ But you, a new brood, native, athletic, continental, greater than
 Arouse! for you must justify me.
 """
 
+INPUT
+input() function requires a prompt message, which it will print out for the user before they enter the new information. 
+
