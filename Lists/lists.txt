@@ -1,0 +1,72 @@
+Notice that:
+
+    A list begins and ends with square brackets ([ and ]).
+    Each item (i.e., 67 or 70) is separated by a comma (,)
+    It’s considered good practice to insert a space ( ) after each comma, but your code will run just fine if you forget the space.
+
+Lists can contain any data type in Python! For example, this list contains a string, integer, boolean, and float. 
+
+any specific data-type ( strings, booleans, lists, etc. ) there is built-in functionality that we can use to create, manipulate, and even delete our data. We call this built-in functionality a method.
+
+For lists, methods will follow the form of list_name.method(). Some methods will require an input value that will go between the parenthesis of the method ( ). 
+
+.append() allows to add an element at the end of a list
+
+.remove() allows to remove an element at the end of a list
+
+concatination: When we want to add multiple items to a list, we can use + to combine two lists (this is also known as concatenation).
+
+Call by Index: print(calls[0]) calls=list, 0=index
+Note: When accessing elements of a list, you must use an int as the index. If you use a float, you will get an error. This can be especially tricky when using division. For example print(calls[4/2]) will result in an error, because 4/2 gets evaluated to the float 2.0.
+
+To solve this problem, you can force the result of your division to be an int by using the int() function. int() takes a number and cuts off the decimal point. For example, int(5.9) and int(5.0) will both become 5. Therefore, calls[int(4/2)] will result in the same value as calls[2], whereas calls[4/2] will result in an error.
+
+Negative Index
+ index -1 to select the last item of a list, even when we don’t know how many elements are in a list.
+
+Two-Dimensional (2D) Lists
+heights = [["Jenny", 61], ["Alexus", 70], ["Sam", 67], ["Grace", 64]]
+heights.append(["Vik", 68])
+
+Two-dimensional lists can be accessed similar to their one-dimensional counterpart. Instead of providing a single pair of brackets [ ] we will use an additional set for each dimension past the first.
+
+If we wanted to access "Noelle"‘s height:
+
+#Access the sublist at index 0, and then access the 1st index of that sublist. 
+noelles_height = heights[0][1] 
+print(noelles_height)
+
+Accessing 2D lists 
+class_name_test = [["Jenny", 90], ["Alexus", 85.5], ["Sam", 83], ["Ellie", 101.5]]
+print(class_name_test)
+sams_score = class_name_test[2][1]
+print(sams_score)
+ellies_score = class_name_test[-1][-1]
+print(ellies_score)
+
+Modifying 2D lists
+To change a value in a two-dimensional list, reassign the value using the specific index. 
+
+example
+incoming_class = [['Kenny', 'American', 9], ['Tanya', 'Ukrainian', 9], ['Madison', 'Indian', 7]]
+print(incoming_class)
+incoming_class[2][2] = 8
+incoming_class[-3][-3] = 'Ken'
+print(incoming_class)
+
+example
+# Your code below:
+first_names = ['Ainsley', 'Ben', 'Chani', 'Depak'] 
+preferred_size = ["Small", "Large", "Medium"]
+preferred_size.append("Medium")
+
+print(preferred_size)
+
+customer_data = [['Ainsley', 'Small', True], ['Ben', 'Large', False], ['Chani', 'Medium', True], ['Depak', 'Medium', False]]
+customer_data[2][2] = False
+customer_data[1].remove(False)
+print(customer_data)
+
+customer_data_final = customer_data + [['Amit', 'Large', True], ['Karim', 'X-Large', False]]
+
+print(customer_data_final)

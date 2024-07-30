@@ -1,0 +1,79 @@
+Question 1
+Which of the following is the correct way to create an empty list?
+Answer
+empty_list = []
+
+Question 2
+Is the following list a valid Python list?
+Code
+
+mylist = ["Mount Everest", 29029]
+Answer
+Yes, lists can contain multipledata types
+
+Question 3
+How would you access "77.45" from the following list?
+
+student_data = [["Ali", 90], ["Bob", 87.5], ["Cam", 80.3], ["Doug", 77.45]]
+Answer
+student_data[-1][-1]
+That’s Correct! The first student_data[-1] will get the last element ["Doug", 77.45] and then the -1 index of that sublist returns 77.45
+
+Question 4
+Define a two-dimensional list called student_data using the table below to represent student names and their respective quiz scores.
+
+The order of elements should be ordered using the index in the table.
+Element 	Index
+[“Olga”, 90] 	0
+[“Maksim”, 77.45] 	1
+[“Doug”, 80.3] 	2
+[“Sophie”, 87.45] 	3
+Answer
+student_data = [
+
+["Olga", 90], 
+
+["Maksim", 77.45], 
+
+["Doug", 80.3], 
+
+["Sophie", 87.45]]
+
+Question 5
+The Python method .remove() will delete every instance of a provided value. 
+Answer
+False. the .remove() method removes only the first matcing element in a list
+
+Question 6
+Modify the two-dimensional list student_hobbies so that "Samantha" has the hobby of "Football" instead of "Cricket".
+
+student_hobbies = [["Nitaya", "Karate"], ["Samantha", "Cricket"], ["Noelle", "Painting"]]
+Answer
+student_hobbies[1][1] = "Football"
+
+Question 7
+Which of the following is the correct way to remove the first instance of “Rio” from name_list?
+Answer
+name_list.remove('Rio)
+
+Question 8
+How would you properly modify the list interview_line to replace "Ben" with "Sarah"
+interview_line = ["Jess", "Noelle", "Ben", "Orlando"]
+Answer
+interview_line[2] = "Sarah 
+
+Question 9
+Which of the following is the correct way to add the number 4 to number_list?
+Answer
+number_list.append(4)
+
+Question 10
+Which of the following is the correct way to turn the following into a list of names: "Tom", "Jerry", "Tweetie", "Sylvester"?
+Answer
+name = ['Tom', 'Jerry', 'Tweetie', 'Sylvester']
+
+Question 11
+What would be the proper way to access "Strawberry" from the list groceries
+groceries = ["Grapes", "Strawberry", "Starfruit", "Apple"]
+Answer
+groceries[1]
