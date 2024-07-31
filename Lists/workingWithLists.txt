@@ -1,0 +1,188 @@
+website through codecademy
+https://www.codecademy.com/resources/docs/python/lists
+
+Adding by Index: insert()
+The Python list method .insert() allows us to add an element to a specific index in a list.
+
+The .insert() method takes in two inputs:
+
+    The index you want to insert into.
+    The element you want to insert at the specified index.
+
+The .insert() method will handle shifting over elements and can be used with negative indices. 
+
+example:
+front_display_list = ["Mango", "Filet Mignon", "Chocolate Milk"]
+print(front_display_list)
+
+# Your code below: 
+front_display_list.insert(0, 'Pineapple')
+
+Removing by Index: pop()
+
+
+    The method can be called without a specific index. Using .pop() without an index will remove whatever the last element of the list is. In our case "Clowns 101" gets removed.
+
+    .pop() is unique in that it will return the value that was removed. If we wanted to know what element was deleted, simply assign a variable to the call of the .pop() method. In this case, we assigned it to removed_element.
+
+
+    The method can be called with an optional specific index to remove. In our case, the index 2 removes the value of "Balloon Making".
+    We don’t have to save the removed value to any variable if we don’t care to use it later.
+example
+data_science_topics = ["Machine Learning", "SQL", "Pandas", "Algorithms", "Statistics", "Python 3"]
+print(data_science_topics)
+
+# Your code below: 
+data_science_topics.pop()
+data_science_topics.pop(3)
+print(data_science_topics)
+
+Consecutive Lists: range()
+The function range() takes a single input, and generates numbers starting at 0 and ending at the number before the input. 
+In order to use this object as a list, we have to first convert it using another built-in function called list().
+
+The list() function takes in a single input for the object you want to convert. 
+print(list(my_range))
+
+example:
+# Your code below: 
+zero_to_seven = range(8)
+print(list(zero_to_seven))
+number_list = range(9)
+print(list(number_list))
+
+Power of Range!
+By default, range() creates a list starting at 0. However, if we call range() with two inputs, we can create a list that starts at a different number.
+
+range(2, 9) would generate numbers starting at 2 and ending at 8 (just before 9)
+
+SKIPPING
+If we use a third input, we can create a list that “skips” numbers.
+
+range(2, 9, 2) will give us a list where each number is 2 greater than the previous number:
+ examples:
+ # Your code below: 
+
+range_five_three = range(5, 15, 3)
+range_diff_five = range(0, 40, 5)
+
+Length
+When we apply len() to a list, we get the number of elements in that list:
+
+example:
+long_list = [1, 5, 6, 7, -23, 69.5, True, "very", "long", "list", "that", "keeps", "going.", "Let's", "practice", "getting", "the", "length"]
+
+big_range = range(2, 3000, 100)
+
+# Your code below: 
+long_list_len = len(long_list)
+print(long_list_len)
+
+big_range_length = len(big_range)
+print(big_range_length)
+
+Slicing Lists
+sliced_list = letters[1:6]
+print(sliced_list)
+
+end point doesnt include 6
+
+example:
+suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
+
+beginning = suitcase[0:4]
+beginning = suitcase[0:2]
+# Your code below: 
+print(beginning)
+middle = suitcase[2:4]
+print(middle)
+
+Selective Slicing!
+fruits[:n] If we want to select the first n elements of a list, we could use the following code: 
+print(fruits[:3]) The following code would start slicing from index 0 and up to index 3. Note that the fruit at index 3 (orange) is not included in the results. 
+fruits[-n:] We can do something similar when we want to slice the last n elements in a list:
+print(fruits[-2:]) his code slices from the element at index -2 up through the last index. 
+fruits[:-n] Negative indices can also accomplish taking all but n last elements of a list.
+
+examples
+suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
+
+# Your code below: 
+# Create a new list called last_two_elements containing the final two elements of suitcase.Print last_two_elements to see your result.
+last_two_elements = suitcase[-2:]
+print(last_two_elements)
+
+# Create a new list called slice_off_last_three containing all but the last three elements. Print slice_off_last_three to see your result.
+slice_off_last_three = suitcase[: -3]
+print(slice_off_last_three)
+
+Counting in a List: count()
+
+example:
+votes = ["Jake", "Jake", "Laurie", "Laurie", "Laurie", "Jake", "Jake", "Jake", "Laurie", "Cassie", "Cassie", "Jake", "Jake", "Cassie", "Laurie", "Cassie", "Jake", "Jake", "Cassie", "Laurie"]
+
+# Your code below: 
+jake_votes = votes.count('Jake')
+print(jake_votes)
+
+Sorting Lists! sort()
+As we can see, the .sort() method sorted our list of names in alphabetical order.
+
+.sort() also provides us the option to go in reverse. Instead of sorting in ascending order like we just saw, we can do so in descending order.
+names.sort(reverse=True)
+print(names)
+
+examples:
+# Checkpoint 1 & 2
+addresses = ["221 B Baker St.", "42 Wallaby Way", "12 Grimmauld Place", "742 Evergreen Terrace", "1600 Pennsylvania Ave", "10 Downing St."]
+addresses.sort()
+print(addresses)
+# Checkpoint 3
+names = ["Ron", "Hermione", "Harry", "Albus", "Sirius"]
+names.sort()
+
+
+# Checkpoint 4 & 5
+cities = ["London", "Paris", "Rome", "Los Angeles", "New York"]
+sorted_cities = cities.sort(reverse=True)
+print(sorted_cities)
+
+Sorting and generating NEW list, leaving OLD unchanged
+sorted() function is different from the .sort() method in two ways:
+
+    It comes before a list, instead of after as all built-in functions do.
+    It generates a new list rather than modifying the one that already exists.
+
+example:
+games = ["Portal", "Minecraft", "Pacman", "Tetris", "The Sims", "Pokemon"]
+
+# Your code below:
+games_sorted = sorted(games)
+print(games)
+print(games_sorted)
+
+Quick Sheet
+
+    Add elements to a list by index using the .insert() method.
+    Remove elements from a list by index using the .pop() method.
+    Generate a list using the range() function.
+    Get the length of a list using the len() function.
+    Select portions of a list using slicing syntax.
+    Count the number of times that an element appears in a list using the .count() method.
+    Sort a list of items using either the .sort() method or sorted() function.
+
+REVIEW Page
+inventory = ["twin bed", "twin bed", "headboard", "queen bed", "king bed", "dresser", "dresser", "table", "table", "nightstand", "nightstand", "king bed", "king bed", "twin bed", "twin bed", "sheets", "sheets", "pillow", "pillow"]
+
+inventory_len = len(inventory)
+inventory_2_6 = inventory[2:6]
+first_3 = inventory[:3]
+twin_beds = inventory.count('twin bed')
+removed_item = inventory.pop(4)
+inventory.insert(10, '19th Century Bed Frame')
+inventory.sort()
+first = inventory.pop(0)
+last = inventory.pop(-1)
+
+print(inventory_len)
+print(inventory)
