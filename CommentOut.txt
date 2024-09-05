@@ -1,0 +1,3 @@
+To quickly comment out the code, use your cursor or mouse to highlight all the code and press command ⌘ + / on a Mac or CTRL + / on a Windows machine. 
+
+or # for one line
