@@ -1,0 +1,47 @@
+numbers = [2, -1, 79, 33, -45]
+only_negative_doubled = []
+
+for num in numbers:
+  if num < 0: 
+    only_negative_doubled.append(num * 2)
+
+print(only_negative_doubled) 
+
+Would output:
+
+[-2, -90]
+
+Now, here is what our code would look like using a list comprehension:
+
+numbers = [2, -1, 79, 33, -45]
+negative_doubled = [num * 2 for num in numbers if num < 0]
+print(negative_doubled)
+
+Would output the same result:
+
+[-2, -90]
+
+Using if/else conditions
+
+numbers = [2, -1, 79, 33, -45]
+doubled = [num * 2 if num < 0 else num * 3 for num in numbers ]
+print(doubled)
+
+Would output:
+
+[6, -2, 237, 99, -90]
+
+
+Here are a few list comprehensions in a single block. Take a moment to compare how the syntax must change depending on whether or not an else clause is included:
+
+numbers = [2, -1, 79, 33, -45]
+
+no_if   = [num * 2 for num in numbers]
+if_only = [num * 2 for num in numbers if num < 0]
+if_else = [num * 2 if num < 0 else num * 3 for num in numbers]
+
+
+Example
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+can_ride_coaster = [height for height in heights if height > 161]
+print(can_ride_coaster)

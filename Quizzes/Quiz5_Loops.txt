@@ -1,0 +1,134 @@
+Question 1
+Fill in the blank with the appropriate while condition in order to print the numbers 1 through 10 in order:
+Code
+
+i = 1
+___Blank___
+    print(i)
+    i += 1
+
+Answer
+while i <= 10
+This will print the counter and then increase the counter by one, until the counter is 11 and the loop body is not entered.
+
+Question 2
+What would be the output of the following code:
+Code
+
+for i in range(3):
+  print(i)
+
+Answer
+0
+1
+2
+The range() function starts at 0.
+
+Question 3
+What would be the output of the following code:
+Code
+
+for i in range(3):
+  print(5)
+
+Answer
+5
+5
+5
+The code inside the loop (printing 5) is executed 3 times.
+
+Question 4
+What would be the output of the following code:
+Code
+
+drink_choices = ["coffee", "tea", "water", "juice", "soda"]
+for drink in drink_choices:
+  print(drink)
+
+Answer
+coffee
+tea
+water
+juice
+soda
+The loop prints each element of the list
+
+Question 5
+What would be the output of the following code:
+Code
+
+numbers = [1, 1, 2, 3]
+for number in numbers:
+  if number % 2 == 0:
+    continue
+  print(number)
+
+Answer
+1
+1
+3
+When the loop reaches the element 2, it passes to the next number before printing it.
+
+Question 6
+What would be the output of the following code:
+Code
+
+numbers = [2, 4, 6, 8]
+for number in numbers:
+  print("hello!")
+
+Answer
+hello! 5 times
+The loop prints “hello!” for each of the 4 numbers in numbers.
+
+Question 7
+Which of these list comprehensions will create a list equal to desired_list?
+Code
+
+desired_list = [-1, 0, 1, 2, 3]
+
+Answer
+[i-1 for i in range(5)]
+range(5) will contain the numbers 0 through 4, and the list comprehension will contain each of 
+
+Question 8
+Fill in the code to loop over the list grouped_topics and print every element in the list.
+
+grouped_topics = [["Algorithms", "Data Structures", "AI"], ["Linear Regression", "SQL"]]
+
+Answer
+for sublist in 
+
+grouped_topics:
+  for sublist_element in 
+
+sublist: 
+    print(
+
+sublist_element)  
+
+Question 9
+Which of these list comprehensions will create a list equal to desired_list?
+Code
+
+my_list = [5, 10, -2, 8, 20]
+desired_list = [10, 8, 20]
+
+Answer
+[i for i in my_list if i > 5]
+This will take the elements of my_list that are greater than 5, which are 10, 8, and 20.
+
+Question 10
+What would be the output of the following code:
+Code
+
+numbers = [1, 1, 2, 3]
+for number in numbers:
+  if number % 2 == 0:
+    break
+  print(number)
+
+Answer
+1
+1
+The first time the code encounters an even number, the loop stops
