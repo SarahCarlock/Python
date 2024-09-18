@@ -1,0 +1,79 @@
+Question 1
+What happens when you call report()?
+Code
+
+time = "3pm"
+mood = "good"
+
+def report():
+  print("The current time is " + time)
+  print("The mood is " + mood)
+
+print("Beginning of report")
+
+report()
+
+Answer
+Two strings are printed: "The current time is 3pm" and "The mood is good."
+these two print statements are inside the report() function.
+
+Question 2
+What line of code can be used to return a variable inner_var from a function back to the piece of code that called the function?
+
+Answer
+return inner_var 
+return passes the variable back to the function caller.
+
+Question 3
+What line of code will call force with a value of 10 for mass and a value of 9.81 for acceleration?
+Code
+
+def force(mass, acceleration):
+  force_val = mass*acceleration
+  return force_val
+
+Answer 
+force(10, 9.81)
+
+Question 4
+Given the following function, what will produce the output "There is no greater agony than bearing an untold story inside you."?
+Code
+
+def quote(x):
+  print("There is no greater agony than bearing " + x + " inside you.")
+
+Answer
+quote("an untold story")
+
+Question 5
+Which variables can be called in the blank spot in this code:
+Code
+
+counter = 0
+
+def update():
+  new_counter = counter + 1
+  return new_counter
+
+_______
+
+Answer
+Just counter
+counter is global in scope, whereas new_counter only exists inside of update.
+
+Question 6
+How do you call a function called setup with no arguments?
+
+Answer
+setup()
+
+Question 7
+How do you call update with a new_value of 20?
+Code
+
+def update(new_value = 10):
+  old_value = new_value
+
+Answer
+update(20)
+Now, inside of update, new_value will be equal to 20
