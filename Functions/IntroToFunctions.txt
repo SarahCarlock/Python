@@ -1,0 +1,55 @@
+# Define the function
+def directions_to_timesSq():
+  print("Walk 4 mins to 34th St Herald Square train station.")
+  print("Take the Northbound N, Q, R, or W train 1 stop.")
+  print("Get off the Times Square 42nd Street stop.")
+  print("Take lots of pictures!")
+
+# Call your function here:
+directions_to_timesSq()
+
+Execution Flow: Code executed one line at a time from top to bottom.
+
+# Parameters
+
+To summarize, here is a quick breakdown of the distinction between a parameter and an argument:
+
+    The parameter is the name defined in the parenthesis of the function and can be used in the function body.
+
+A function definition in Python
+
+    The argument is the data that is passed in when we call the function, which is then assigned to the parameter name.
+
+Calling a function with a specific value like trip_welcome("Empire State Building")
+
+# Your code below:
+def generate_trip_instructions(location):
+  print("Looks like you are planning a trip to visit " + location)
+  print("You can use the public subway system to get to " + location)
+
+generate_trip_instructions("Central Park")
+generate_trip_instructions("Grand Central Station")
+
+# Multiple Parameters
+
+def trip_welcome(origin, destination):
+  print("Welcome to Tripcademy")
+  print("Looks like you are traveling from " + origin)
+  print("And you are heading to " + destination)
+
+# function call
+trip_welcome("Prospect Park", "Atlantic Terminal")
+
+Example
+# Write your code below: 
+
+def calculate_expenses(plane_ticket_price, car_rental_rate, hotel_rate, trip_time):
+  car_rental_total = car_rental_rate * trip_time
+  hotel_total = hotel_rate * trip_time - 10
+  trip_total = car_rental_total + hotel_total + plane_ticket_price
+
+  return trip_total
+
+# Step 5: call your function
+
+print(calculate_expenses(200, 100, 100, 5))

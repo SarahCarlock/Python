@@ -1,0 +1,31 @@
+In Python, there are 3 different types of arguments we can give a function.
+
+    Positional arguments: arguments that can be called by their position in the function definition.
+        def calculate_taxi_price(miles_to_travel, rate, discount):
+            print(miles_to_travel * rate - discount )
+        
+        # 100 is miles_to_travel
+        # 10 is rate
+        # 5 is discount
+        calculate_taxi_price(100, 10, 5)
+
+    Keyword arguments: arguments that can be called by their name.
+        calculate_taxi_price(rate=0.5, discount=10, miles_to_travel=100)
+
+    Default arguments: arguments that are given default values.
+        We can provide a default value to a parameter by using the assignment operator (=). This will happen in the function declaration rather than the function call. 
+            def calculate_taxi_price(miles_to_travel, rate, discount = 10):
+                print(miles_to_travel * rate - discount )
+
+        When using a default argument, we can either choose to call the function without providing a value for a discount (and thus our function will use the default value assigned) or overwrite the default argument by providing our own: 
+
+Example
+# Write your code below:
+def trip_planner(first_destination, second_destination, final_destination = "Codecademy HQ"):
+  print("Here is what your trip will look like!")
+  print("First, we will stop in " + first_destination + ", then " + second_destination + ", and lastly " + final_destination)
+
+trip_planner("France", "Germany", "Denmark")
+trip_planner("Denmark", "France", "Germany")
+trip_planner(first_destination = "Iceland", final_destination = "Germany", second_destination = "India")
+trip_planner("Brooklyn", "Queens")

@@ -1,0 +1,65 @@
+Example of Scope
+
+# This function will print a hardcoded count of how many locations we have.
+def print_count_locations():
+  print("There are 3 locations")
+
+# This function will print the favorite locations
+def show_favorite_locations():
+  print("Your favorite locations are: " + favorite_locations)
+
+favorite_locations = "Paris, Norway, Iceland"
+print_count_locations()
+show_favorite_locations()
+
+# return
+Functions can also return a value to the program so that this value can be modified or used later.
+
+Returned function value = a result from a function store in a variable.
+
+Example
+current_budget = 3500.75
+
+def print_remaining_budget(budget):
+  print("Your remaining budget is: $" + str(budget))
+
+print_remaining_budget(current_budget)
+
+# Write your code below: 
+def deduct_expense(budget, expense):
+  return budget - expense
+
+shirt_expense = 9
+new_budget_after_shirt = deduct_expense(current_budget, shirt_expense)
+print_remaining_budget(new_budget_after_shirt)
+
+# Multiple Returns 
+
+Example
+weather_data = ['Sunny', 'Sunny', 'Cloudy', 'Raining', 'Snowing']
+
+def threeday_weather_report(weather):
+  first_day = " Tomorrow the weather will be " + weather[0]
+  second_day = " The following day it will be " + weather[1]
+  third_day = " Two days from now it will be " + weather[2]
+  return first_day, second_day, third_day
+
+This function takes in a set of data in the form of a list for the upcoming week’s weather. We can get our returned function values by assigning them to variables when we call the function:
+
+monday, tuesday, wednesday = threeday_weather_report(weather_data)
+
+print(monday)
+print(tuesday)
+print(wednesday)
+
+example!
+def top_tourist_locations_italy():
+  first = "Rome"
+  second = "Venice"
+  third = "Florence"
+  return first, second, third
+  most_popular1, most_popular2, most_popular3 = top_tourist_locations_italy()
+  print(most_popular1)
+  print(most_popular2)
+  print(most_popular3)
+
