@@ -1,0 +1,89 @@
+Function Syntax
+
+As a refresher, function syntax looks like this:
+
+def some_function(some_input1, some_input2):
+  # … do something with the inputs …
+  return output
+
+For example, a function that returns the sum of the first and last elements of a given list might look like this:
+
+def first_plus_last(my_list):
+  return my_list[0] + my_list[-1]
+
+And this would produce output like:
+
+>>> first_plus_last([1, 2, 3, 4])
+5
+>>> first_plus_last([8, 2, 5, -8])
+0
+>>> first_plus_last([-10, 2, 3, -4])
+-14
+
+1. Append Size
+# Write your function here
+def append_size(my_list):
+  length = len(my_list)
+  my_list.append(length)
+  return my_list
+
+# Uncomment the line below when your function is done
+print(append_size([23, 42, 108]))
+
+OR 
+
+def append_size(input_list):
+  input_list.append(len(input_list))
+  return input_list
+
+2. Append Sum 
+# Write your function here
+def append_sum(my_list):
+  my_list.append(my_list[-1] + my_list[-2])
+  my_list.append(my_list[-1] + my_list[-2])
+  my_list.append(my_list[-1] + my_list[-2])
+  return my_list
+
+# Uncomment the line below when your function is done
+print(append_sum([1, 1, 2]))
+
+OR 
+
+# Define the append_sum function
+def append_sum(my_list):
+  for i in range(3):
+    # Get the sum of last two elements of the list and append it to the list
+    my_list.append(my_list[-1] + my_list[-2])
+  return my_list
+
+3. Larger list
+# Write your function here
+def larger_list(my_list1, my_list2):
+  if len(my_list1) >= len(my_list2):
+    return my_list1[-1]
+  else:
+    return my_list2[-1]
+
+# Uncomment the line below when your function is done
+print(larger_list([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+4. More Than N
+# Write your function here
+def more_than_n(my_list, item, n):
+  if my_list.count(item) > n:
+    return True
+  else:
+    return False
+
+# Uncomment the line below when your function is done
+print(more_than_n([2, 4, 6, 2, 3, 2, 1, 2], 2, 3))
+
+5. Combine Sort
+# Write your function here
+def combine_sort(my_list1, my_list2):
+  new_fab_list = my_list1 + my_list2
+  now_sorted = sorted(new_fab_list)
+  return now_sorted
+
+# Uncomment the line below when your function is done
+print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
