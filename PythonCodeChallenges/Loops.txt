@@ -1,0 +1,94 @@
+Function and Loop Syntax
+
+As a refresher, function syntax looks like this:
+
+def some_function(some_input1, some_input2):
+  … do something with the inputs …
+  return output
+
+For example, a function that prints all odd numbers in a list would look like this:
+
+def odd_nums(my_list):
+  for item in my_list:
+    if item % 2 == 1:
+      print(item)
+
+And this would produce output like:
+
+>>> odd_nums([4, 7, 9, 10, 13])
+7
+9
+13
+
+Challenges
+1. Divisible by 10
+#Write your function here
+def divisible_by_ten(nums):
+  count = 0
+  for x in nums:
+    if x % 10 == 0:
+      count = count + 1
+  return count
+
+
+#Uncomment the line below when your function is done
+print(divisible_by_ten([20, 25, 30, 35, 40]))
+
+OR 
+
+def divisible_by_ten(nums):
+  count = 0
+  for number in nums:
+    if (number % 10 == 0):
+      count += 1
+  return count
+
+2. Greetings
+#Write your function here
+def add_greetings(names):
+  greet_um = []
+  for name in names:
+    greet_um.append("Hello, " + name)
+  return greet_um
+  
+
+#Uncomment the line below when your function is done
+print(add_greetings(["Owen", "Max", "Sophie"]))
+
+3. Delete Starting Even numbers
+#Write your function here
+def delete_starting_evens(my_list):
+  while (len(my_list) > 0 and my_list[0] % 2 ==0):
+    my_list = my_list[1:]
+  return my_list
+
+#Uncomment the lines below when your function is done
+print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
+print(delete_starting_evens([4, 8, 10]))
+
+4. Odd indices
+#Write your function here
+def odd_indices(my_list):
+  new_list = []
+  for index in range(1, len(my_list), 2):
+    new_list.append(my_list[index])
+  return new_list 
+
+#Uncomment the line below when your function is done
+print(odd_indices([4, 3, 7, 10, 11, -2]))
+
+OR 
+
+In our solution, we iterate through a range of values. The function range(1, len(my_list), 2) returns a list of numbers starting at 1, ending at the length of len, and incrementing by 2. This causes the loop to iterate through every odd number until the last index of our list of numbers. Using this, we can simply append the element at whatever index we are at since we know that using our range we will be iterating through only odd indices. 
+
+5. Exponents
+#Write your function here
+def exponents(bases, powers):
+  new_values = []
+  for base in bases:
+    for power in powers:
+      new_values.append(base ** power)
+  return new_values
+
+#Uncomment the line below when your function is done
+print(exponents([2, 3, 4], [1, 2, 3]))
