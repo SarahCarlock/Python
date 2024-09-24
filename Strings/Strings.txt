@@ -1,0 +1,133 @@
+A string can be thought of as a list of characters.
+
+Like any other list, each character in a string has an index. Consider the string:
+
+favorite_fruit = "blueberry"
+
+We can select specific letters from this string using the index. Let’s look at the first letter of the string.
+
+print(favorite_fruit[1])
+# Output: l
+
+Whoops, is that the first letter you expected? Notice that the letter at index 1 of "blueberry" isn’t b, it’s l. This is because the indices of a string start at 0. b is located at the zero index and we could select it using:
+
+print(favorite_fruit[0])
+# Output: b
+
+It’s important to note that indices of strings must be integers. If we were to try to select a non-integer index we would get a TypeError.
+
+Not only can we select a single character from a string, but we can also select entire chunks of characters from a string. We can do this with the following syntax:
+
+string[first_index:last_index]
+
+We can also have open-ended selections. If we remove the first index, the slice starts at the beginning of the string and if we remove the second index the slice continues to the end of the string.
+
+print(favorite_fruit[:4])
+# Output: blue
+
+print (favorite_fruit[4:])
+
+
+
+Write a function called account_generator() that takes two inputs, first_name and last_name and concatenates the first three letters of each and then returns the new account name.
+first_name = "Julie"
+last_name = "Blevins"
+
+def account_generator(first_name, last_name):
+  return (first_name[:3] + last_name[:3])
+
+new_account = account_generator(first_name, last_name)
+
+
+Instead, the last character in a string has an index that is len(string_name) - 1.
+
+last_char = favorite_fruit[len(favorite_fruit)-1]
+
+print(last_char)
+# Output: y
+
+You could also slice the last several characters of a string using len():
+
+length = len(favorite_fruit)
+last_chars = favorite_fruit[length-4:]
+print(last_chars)
+# Output: erry
+
+# Iterate through strings
+def print_each_letter(word):
+  for letter in word:
+    print(letter)
+
+This code will iterate through each letter in a given word and will print it to the terminal.
+
+favorite_color = "blue"
+print_each_letter(favorite_color)
+# => 'b'
+# => 'l'
+# => 'u'
+# => 'e'
+
+# Iterate without len()
+
+def get_length(word):
+  counter = 0
+  for letter in word:
+    counter += 1
+  return counter
+
+# Example
+This code will count the number of bs in the string “blueberry” (hint: it’s two).
+favorite_fruit = "blueberry"
+counter = 0
+for character in favorite_fruit:
+  if character == "b":
+    counter = counter + 1
+print(counter)
+
+#Example matching strings
+def letter_check(word, letter):
+  for character in word:
+    if character == letter: 
+      return True
+  return False
+print(letter_check("strawberry", "a"))
+
+
+
+
+
+letter in word is a boolean expression that is True if the string letter is in the string word. Here are some examples:
+
+print("e" in "blueberry")
+# => True
+print("a" in "blueberry")
+# => False
+
+In fact, this method is more powerful than the function you wrote in the last exercise because it not only works with letters, but with entire strings as well.
+
+print("blue" in "blueberry")
+# => True
+print("blue" in "strawberry")
+# => False
+
+It can be helpful to include more than one boolean expression in the same line of code. To do this, use and or and not in between the boolean expressions.
+
+print("e" in "blueberry" and "e" in "carrot")
+# => False
+print("e" in "blueberry" and not "e" in "carrot")
+# => True
+
+The first example above is False because ONE of the expressions was False; there is no “e” in “carrot”. The second example is True because there is an “e” in “blueberry” and not an “e” in “carrot”; both expressions are True.
+
+# Example
+def contains(big_string, little_string):
+  return little_string in big_string
+
+def common_letters(string_one, string_two):
+  common = []
+  for letter in string_one:
+    if (letter in string_two) and not (letter in common):
+      common.append(letter)
+  return common
+
+

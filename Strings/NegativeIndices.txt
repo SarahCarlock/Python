@@ -1,0 +1,26 @@
+Negative indices count backward from the end of the string, so string_name[-1] is the last character of the string, string_name[-2] is the second last character of the string, etc.
+
+Here are some examples:
+
+favorite_fruit = 'blueberry'
+print(favorite_fruit[-1])
+# => 'y'
+
+print(favorite_fruit[-2])
+# => 'r'
+
+print(favorite_fruit[-3:])
+# => 'rry'
+
+# STRINGS ARE IMMUTABLE
+
+So far in this lesson, we’ve been selecting characters from strings, slicing strings, and concatenating strings. Each time we perform one of these operations we are creating an entirely new string.
+
+This is because strings are immutable. This means that we cannot change a string once it is created. We can use it to create other strings, but we cannot change the string itself.
+
+This property, generally, is known as mutability. Data types that are mutable can be changed, and data types, like strings, that are immutable cannot be changed.
+
+first_name = "Bob"
+last_name = "Daily"
+
+fixed_first_name = "R" + first_name[1:]
