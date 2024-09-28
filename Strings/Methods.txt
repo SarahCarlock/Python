@@ -1,0 +1,111 @@
+String Methods
+
+    .lower() returns the string with all lowercase characters.
+    .upper() returns the string with all uppercase characters.
+    .title() returns the string in title case, which means the first letter of each word is capitalized.
+
+.join() joins a list of strings together with a given delimiter.
+        The syntax of .join() is: 'delimiter'.join(list_you_want_to_join)
+
+        Example
+            my_munequita = ['My', 'Spanish', 'Harlem', 'Mona', 'Lisa']
+            print(' '.join(my_munequita))
+            # => 'My Spanish Harlem Mona Lisa'
+        
+        We take the list of strings, my_munequita, and we joined it together with our delimiter, ' ', which is a space. The space is important if you are trying to build a sentence from words, otherwise, we would have ended up with:
+            print(''.join(my_munequita))
+            # => 'MySpanishHarlemMonaLisa'
+        You can also join using escape sequences as the delimiter. 
+            smooth_fifth_verse_lines = ['Well I\'m from the barrio', 'You hear my rhythm on your radio', 'You feel the turning of the world so soft and slow', 'Turning you \'round and \'round']
+            smooth_fifth_verse = '\n'.join(smooth_fifth_verse_lines)
+            print(smooth_fifth_verse)
+
+            Well I'm from the barrio
+            You hear my rhythm on your radio
+            You feel the turning of the world so soft and slow
+            Turning you 'round and 'round
+
+.replace()  Replace takes two arguments and replaces all instances of the first argument in a string with the second argument. The syntax is as follows 
+            string_name.replace(substring_being_replaced, new_substring)
+
+            example
+                with_spaces = "You got the kind of loving that can be so smooth"
+                with_underscores = with_spaces.replace(' ', '_')
+                print(with_underscores)
+                # 'You_got_the_kind_of_loving_that_can_be_so_smooth'
+
+
+.strip()    great method for cleaning strings. Default removes white spaces from the front and back of the string. Adding an argument will specify what to remove.
+
+            Example
+                featuring = "!!!rob thomas       !!!!!"
+                print(featuring.strip('!'))
+                # => 'rob thomas   
+
+.format()   takes variables as an argument and includes them in the string that it is run on. You include {} marks as placeholders for where those variables will be imported.
+                def favorite_song_statement(song, artist):
+                return "My favorite song is {} by {}.".format(song, artist)
+                can take as many arguments as there are {} in the string it is run on
+                print(favorite_song_statement("Smooth", "Santana"))
+                # => "My favorite song is Smooth by Santana."
+
+            Example
+                def poem_title_card(title, poet):
+                return "The poem \"{}\" is written by \"{}\".".format(title, poet)
+
+                print(poem_title_card("I Hear America Singing","Walt Whitman"))
+            
+            By including keywords in the string, and in the arguments, you can remove that ambiguity. 
+                def favorite_song_statement(song, artist):
+                return "My favorite song is {song} by {artist}.".format(song=song, artist=artist)
+
+                def favorite_song_statement(song, artist):
+                # this will have the same output as the above example
+                return "My favorite song is {song} by {artist}.".format(artist=artist, song=song)
+
+            Example
+                def poem_description(publishing_date, author, title, original_work):
+                poem_desc = "The poem {title} by {author} was originally published in {original_work} in {publishing_date}.".format(publishing_date=publishing_date, author=author, title=title, original_work=original_work)
+                return poem_desc
+
+                my_beard_description = poem_description(author = "Shel Silverstein",
+                title = "My Beard",
+                original_work = "Where the Sidewalk Ends",
+                publishing_date = "1974")
+
+
+.split()    performed on a string, takes one argument, and returns a list of substrings found between the given argument (which in the case of .split() is known as the delimiter). The following syntax should be used:
+            string_name.split(delimiter)
+            If you do not provide an argument for .split() it will default to splitting at spaces.
+
+.split(with argument) If we provide an argument for .split() we can dictate the character we want our string to be split on. This argument should be provided as a string itself. 
+
+.find()     takes a string as an argument and searching the string it was run on for that string. It then returns the first index value where that string is located.
+            Here’s an example:
+            print('smooth'.find('t'))
+            # => '4'
+            You can also search for larger strings, and .find() will return the index value of the first character of that string.
+
+
+
+#Example 
+#Create another list called author_last_names that only contains the last names of the poets in the provided string.
+    authors = "Audre Lorde,Gabriela Mistral,Jean Toomer,An Qi,Walt Whitman,Shel Silverstein,Carmen Boullosa,Kamala Suraiyya,Langston Hughes,Adrienne Rich,Nikki Giovanni"
+
+    author_names = authors.split(",")
+    author_last_names = []
+    for name in author_names:
+    author_last_names.append(name.split()[-1])
+    print(author_last_names)
+
+# Escape Sequences with split
+    \n Newline : allow us to split a multi-line string by line breaks and \t will allow us to split a string by tabs. 
+    \t Horizontal Tab : when dealing with certain datasets because it is not uncommon for data points to be separated by tabs.
+
+# Strip and Join example
+    love_maybe_lines = ['Always    ', '     in the middle of our bloodiest battles  ', 'you lay down your arms', '           like flowering mines    ','\n' ,'   to conquer me home.    ']
+    love_maybe_lines_stripped = []
+    for line in love_maybe_lines:
+    love_maybe_lines_stripped.append(line.strip())
+    love_maybe_full = '\n'.join(love_maybe_lines_stripped)
+    print(love_maybe_full)

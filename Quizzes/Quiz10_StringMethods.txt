@@ -1,0 +1,68 @@
+Question 1
+Given the poem (When You Are Old, by W. B. Yeats) saved as multiline string as shown in the code block, what code could we use to create a list that contains a string of each line in the poem?
+Code
+
+when_you_are_old = \
+"""When you are old and grey and full of sleep,
+And nodding by the fire, take down this book,
+And slowly read, and dream of the soft look
+Your eyes had once, and of their shadows deep;
+
+How many loved your moments of glad grace,
+And loved your beauty with love false or true,
+But one man loved the pilgrim soul in you,
+And loved the sorrows of your changing face;
+
+And bending down beside the glowing bars,
+Murmur, a little sadly, how Love fled
+And paced upon the mountains overhead
+And hid his face amid a crowd of stars."""
+
+Answer
+list_of_lines = when_you_are_old.split("\n")
+Splitting this string at the escape sequence "\n", or newline, will produce a list of each line in the poem.
+
+Question 2
+Given the following block of code, what is stored in the string split_hairs?
+Code
+dirty_harry = "Go ahead, make my day."
+split_hairs = dirty_harry.split("a")
+
+Answer
+["Go ", "he", "d, m", "ke my d", "y."]
+The code will split the string dirty_harry at each instance of the letter "a" which results in this list of strings.
+
+Question 3
+Which of the following is a benefit of using .format() to include variables in your strings?
+
+Answer
+It makes your code more legible
+.format() make your code much more legible by making your string appear in a single set of ".
+
+Question 4
+Given the list greeting = ["Hello", "my", "name", "is", "Earl"] what line of code would produce a string that contains `”Hello_my_name_is_Earl”.
+
+Answer
+"_".join(greeting)
+this code will join each string in the list together with the character "_".
+
+Question 5
+Which of the following answer choices best describes the function of the string method .find()?
+
+Answer
+.find() searched a string for its argument and returns the index location of that argument.
+This is the function of .find().
+
+Question 6
+Given the string hello_jerry = "Hi, my name is Jerry", which of the following lines of code will produce the string "Hi, My Name Is Jerry"?
+
+Answer
+hello_jerry.title()
+this string method capitalized each word in a string
+
+Question 7
+Consider the string user_name = ":::::::: Eloise :::::::::::". What line of code would clean this string and produce the string user_name_fixed = "Eloise"?
+
+Answer
+user_name_fixed = user_name.strip(":").strip()
+This code will first strip the ":" characters from the string and will then strip the remaining whitespace from the string.
