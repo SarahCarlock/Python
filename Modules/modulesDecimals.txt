@@ -1,0 +1,21 @@
+from decimal import Decimal
+
+cost_of_gum = Decimal('0.10')
+cost_of_gumdrop = Decimal('0.35')
+
+cost_of_transaction = cost_of_gum + cost_of_gumdrop
+# Returns 0.45 instead of 0.44999999999999996
+
+
+
+
+
+# Import Decimal below:
+from decimal import Decimal
+
+# Fix the floating point math below:
+two_decimal_points = Decimal('0.20') + Decimal('0.69')
+print(two_decimal_points)
+
+four_decimal_points = Decimal('0.5300') * Decimal('0.6500')
+print(four_decimal_points)
