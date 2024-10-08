@@ -1,0 +1,69 @@
+Question 1
+The keyword 
+
+as 
+
+is used to assign an alternative name to an imported module in Python.
+
+Question 2
+The 
+
+date 
+
+object in Python's datetime module is used to represent a specific date without time information.
+
+Question 3
+In the statement "import numpy as np", the term 
+
+"np" 
+
+is the alias given to the numpy module.
+
+Question 4
+The most basic way to import a module in Python is: 
+
+import 
+
+module_name
+
+Question 5
+To import a Python file named 'helper_functions.py' located in the same folder, you would write: 
+
+import helper_functions
+
+Question 6
+The 
+
+choice() 
+
+function from the random module is used to select a random item from a list.
+
+Question 7
+If you have a file named 'utils.py' in the same directory as your main script, you can access its functions by using: import 
+
+utils
+
+Question 8
+The 
+
+decimal library in Python is used for high-precision decimal arithmetic.
+
+Question 9
+To represent both date and time information in a single object, you would use the 
+
+datetime class from the datetime module.
+
+Question 10
+To import specific functions from a module without importing the entire module, you would use: 
+
+from module import function1, function2
+
+Question 11
+To use the Decimal class, you need to import it from the 
+
+decimal module.
+
+Question 12
+To select a random integer from a specified range, you would use the 
+
+randint() function from the random module.
