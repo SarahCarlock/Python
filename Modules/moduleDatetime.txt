@@ -1,0 +1,25 @@
+Terminal > type python3 > will oep n python to mess with in Terminal
+
+-import daytime module in python 3
+    from datetime import datetime
+-Creating a date using year, month, day as arguments.
+    birthday = datetime(1986, 2, 1)
+    year, month, day, hour(24), min, sec, microseconds, timezone
+
+    birthday.year
+    birthday.weekday()
+    0 = monday, 1 = tuesday
+
+-Creating a date using datetime.now()
+    datetime.now() = full day/time stamp
+    can subtract, "timedelta"
+    datetime.now() - datetime(2000, 1, 1) = datetime.timedelta(days=9046, seconds=56928, microseconds=407423)
+
+
+-Parsing a date using strptime()
+    google python3 datetime for formate characters ( )
+    parsed_date = datetime.strptime('Jan 15, 2018', '%b %d, %Y')
+
+-Rendering a date as a string using strftime()
+    date_string = datetime.strftime(datetime.now(), '%b %d %Y')
+    date_string will make the date string
