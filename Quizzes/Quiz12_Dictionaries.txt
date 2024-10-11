@@ -1,0 +1,48 @@
+Question 1
+What will the following code output?
+Code
+
+conference_rooms = ["executive", "hopper", "lovelace", "pod", "snooze booth"]
+capacity = [7, 20, 6, 2, 1]
+room_dict = {key:value for key, value in zip(conference_rooms, capacity)}
+
+print(room_dict)
+
+Answer
+{"executive": 7, "hopper": 20, "lovelace": 6, "pod": 2, "snooze": 1}
+The conference_rooms list becomes the keys, and the capacity list becomes the values.
+
+Question 2
+Which of these is an invalid dictionary (will result in a TypeError when trying to run)?
+
+Answer
+{["apple", "orange"]: "fruit", ["broccoli"]: "vegetable", ["salt", "paprika", "saffron"]: "spice"}
+Lists cannot be the keys of a dictionary, because they are mutable.
+
+Question 3
+What is the value of inventory after this code is run?
+Code
+
+inventory = {"iron spear": 12, "invisible knife": 30, "needle of ambition": 10, "stone glove": 20}
+
+inventory["invisible knife"] = 40
+inventory["mithril shield"] = 25
+
+Answer
+{"iron spear": 12, "invisible knife": 40, "needle of ambition": 10, "stone glove": 20, "mithril shield": 25}
+The value of "invisible knife" has been overwritten and a value for "mithril shield" has been added.
+
+Question 4
+What is the line of code to initialize an empty dictionary called thesaurus?
+
+Answer
+thesaurus = {}
+Empty {} brackets create an empty dictionary.
+
+Question 5
+Which of these dictionaries has integers as the keys and strings as the values? 
+
+Answer
+zipcode = {35801: "Alabama", 99501: "Alaska", 97201: "Oregon", 05751: "Vermont", 07039: "Ney Jersey"}
+The keys, like 35801, are integers. The values, like "Alabama", are strings.
+
