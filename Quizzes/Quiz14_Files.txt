@@ -1,0 +1,48 @@
+Question 1
+Which of the following would you use to read in a CSV file as a dictionary?
+
+Answer
+csv.DictReader 
+csv.DictReader is a useful tool for reading CSV information.
+
+Question 2
+What different modes, passed as arguments to the open() function, are there for opening a file in Python?
+
+Answer
+Read-mode('r', the default mode), Write-mode('w'), and Append-mode('a').
+
+Question 3
+Which of the following opens a file in Python?
+
+Answer
+with open('file1.txt') as file_ogj:
+    pass 
+Using open() opens a file object and .read() saves the contents as a string!
+
+Question 4
+What does the with command do in Python?
+
+Answer
+Creates a context-manager, which performs cleanup after exiting the adjacent indented block.
+with creates a context manager.
+
+Question 5
+Which of the following methods on a file object (called file_object) reads the contents of a file and returns it as a string?
+
+Answer
+file_content = file_object.read()
+.read() reads the contents of a file.
+
+Question 6
+What method reads a single line from a file object variable called file_object?
+
+Answer
+file_object.readline()
+.readline() is the method to read a single line.
+
+Question 7
+What function would you use to render Python data to a JSON file?
+
+Answer
+json.dump
+json.dump() takes Python data and a file object to output to.
