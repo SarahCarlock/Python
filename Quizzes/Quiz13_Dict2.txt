@@ -1,0 +1,113 @@
+Question 1
+ What will the following code output?
+Code
+
+combo_meals = {1: ["hamburger", "fries"], 2: ["hamburger", "fries", "soda"], 4: ["veggie burger", "salad", "soda"], 6: ["hot dog", "apple slices", "orange juice"]}
+print(combo_meals.get(3, ["hamburger", "fries"]))
+
+Answer
+["hamburger", "fries"]
+There is no key 3 in this dictionary, so the default provided to the .get() function, ["hamburger", "fries"], will be printed.
+
+Question 2
+What will the following code output?
+Code
+
+inventory = {"iron spear": 12, "invisible knife": 30, "needle of ambition": 10, "stone glove": 20, "the peacemaker": 65, "demonslayer": 50}
+print(inventory.get("stone glove", 30))
+
+Answer
+20
+The value associated with the key "stone glove" is 20.
+
+Question 3
+What is the output of the following code?
+Code
+
+oscars = {"Best Picture": "Moonlight", "Best Actor": "Casey Affleck", "Best Actress": "Emma Stone", "Animated Feature": "Zootopia"}
+
+for element in oscars:
+  print(element)
+
+Answer
+"Best Picture"
+"Best Actor"
+"Best Actress"
+"Animated Feature"
+This loop goes through each key in the dictionary and prints it.
+
+Question 4
+What is the output of the following code?
+Code
+
+oscars = {"Best Picture": "Moonlight", "Best Actor": "Casey Affleck", "Best Actress": "Emma Stone", "Animated Feature": "Zootopia"}
+
+for element in oscars.values():
+  print(element)
+
+Answer
+"Moonlight"
+"Casey Affleck"
+"Emma Stone"
+"Zootopia"
+This loop goes through each value in the dictionary and prints it.
+
+Question 5
+What does the following code output?
+Code
+
+inventory = {"iron spear": 12, "invisible knife": 30, "needle of ambition": 10, "stone glove": 20, "the peacemaker": 65, "demonslayer": 50}
+
+print(12 in inventory)
+
+Answer
+False
+This code checks for the existence of 12 as a key in the dictionary. Although it doesn’t exist as a key, this code would still run.
+
+Question 6
+What will the following code output?
+Code
+
+combo_meals = {1: ["hamburger", "fries"], 2: ["hamburger", "fries", "soda"], 4: ["veggie burger", "salad", "soda"], 6: ["hot dog", "apple slices", "orange juice"]}
+print(combo_meals[2])
+
+Answer
+["hamburger", "fries", "soda"]
+
+Questiuon 7
+What is the output of the following code?
+Code
+
+raffle = {223842: "Teddy Bear", 872921: "Concert Tickets", 320291: "Gift Basket", 412123: "Necklace", 298787: "Pasta Maker"}
+
+raffle.pop(561721, "No Value")
+print(raffle)
+
+
+Answer
+{223842: "Teddy Bear", 872921: "Concert Tickets", 320291: "Gift Basket", 412123: "Necklace", 298787: "Pasta Maker"}
+no change
+The command .pop() will try to remove the nonexistent key 561721 from the dictionary, so raffle will remain unchanged.
+
+Question 8
+What will the following code output?
+Code
+
+combo_meals = {1: ["hamburger", "fries"], 2: ["hamburger", "fries", "soda"], 4: ["veggie burger", "salad", "soda"], 6: ["hot dog", "apple slices", "orange juice"]}
+print(combo_meals[3])
+
+Answer
+KeyError
+There is no key:value pair in this dictionary with a key of 3, so this code will produce an error.
+
+Question 9
+What will the following code output?
+Code
+
+inventory = {"iron spear": 12, "invisible knife": 30, "needle of ambition": 10, "stone glove": 20, "the peacemaker": 65, "demonslayer": 50}
+
+print("the peacemaker" in inventory)
+
+Answer
+True
+This code checks for the existence of "the peacemaker" as a key in the dictionary.
