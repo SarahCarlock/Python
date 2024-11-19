@@ -1,0 +1,71 @@
+Question 1
+Which method, defined within a class, provides instructions on what to assign to a new instance when it is created?
+
+Answer
+__init__
+Called a constructor, __init__ gives object construction directions.
+
+Question 2
+What would be printed from the following code?
+Code
+
+class User:
+  def __init__(self, name):
+    self.name = name
+    
+  def __repr__(self):
+    return "Hiya {}!".format(self.name)
+  
+devorah = User("Devorah")
+print(devorah)
+
+Answer
+Hiya Devorah!
+__repr__ returns the string representation of an object.
+
+Question 3
+What is the first argument of a method?
+
+Answer
+The instance of the object itself. We usually refer to it as self.
+self is not enforced by Python but is best practice to refer to it.
+
+Question 4
+What does the hasattr() function call in the last line here evaluate to?
+Code
+
+class HoldsFive:
+  five = 5
+  
+five_holder = HoldsFive()
+
+hasattr(five_holder, 'five')
+
+Answer
+True
+hasattr() returns a boolean that evaluates whether the given object has the attribute given by the second argument.
+
+Question 5
+What does the type() function do in Python?
+
+Answer
+Returns the class that an object implements.
+type() takes an object and returns the class.
+
+Question 6
+What keyword is used to indicate the start of a class definition?
+
+Answer
+class
+Use class to indicate a class definition.
+
+Question 7
+How would we create an instance of the following class?
+Code
+
+class NiceClass:
+  neat_attribute = "neat"
+
+Answer
+nice_instance = NiceClass()
+This creates a new instance of NiceClass and saves it into nice_instance.
