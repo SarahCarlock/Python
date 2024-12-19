@@ -1,0 +1,114 @@
+Python Code Challenges: Dictionaries
+
+Python Code Challenges Involving Dictionaries
+
+This article will help you review Python functions by providing some code challenges involving dictionaries.
+
+Some of these challenges are difficult! Take some time to think about them before starting to code.
+
+You might not get the solution correct on your first try — look at your output, try to find where you’re going wrong, and iterate on your solution.
+
+Finally, if you get stuck, use our solution code! If you “Check Answer” twice with an incorrect solution, you should see an option to get our solution code. However, truly investigate that solution — experiment and play with the solution code until you have a good grasp of how it is working. Good luck!
+Function Syntax
+
+def some_function(some_input1, some_input2):
+  … do something with the inputs …
+  return output
+
+For example, a function that counts the number of values in a dictionary that are above a given number would look like this:
+
+def greater_than_ten(my_dictionary, number):
+  count = 0
+  for value in my_dictionary.values():
+    if value > number:
+      count += 1
+  return count
+
+And this would produce output like:
+
+>>> greater_than_ten({"a":1, "b":2, "c":3}, 0)
+3
+>>> greater_than_ten({"a":1, "b":2, "c":3}, 5)
+0
+
+Challenges
+
+We’ve included 5 challenges below. Try to answer all of them and polish up your problem-solving skills!
+1. Sum Values
+
+For the first code challenge, we are going to look at only the values in a dictionary. This function should sum up all of the values from the key-value pairs in the dictionary. Here are the steps we need:
+
+    Define the function to accept one parameter for our dictionary
+    Create a variable to keep track of our sum
+    Loop through every value in the dictionary
+    Inside the loop, add each value to the sum
+    Return the sum
+
+Coding question
+Questions
+
+Write a function named sum_values that takes a dictionary named my_dictionary as a parameter. The function should return the sum of the values of the dictionary
+
+# Write your sum_values function here:
+def sum_values(my_dictionary):
+  my_sum = 0
+  for value in my_dictionary.values():
+    my_sum = my_sum + value
+  return my_sum
+# Uncomment these function calls to test your sum_values function:
+print(sum_values({"milk":5, "eggs":2, "flour": 3}))
+# should print 10
+print(sum_values({10:1, 100:2, 1000:3}))
+# should print 6
+
+Here is this solution:
+
+def sum_values(my_dictionary):
+  total = 0
+  for value in my_dictionary.values():
+    total += value
+  return total
+
+We start by creating a variable to keep track of the total. Next, we use the values() function in our for loop in order to iterate through each of the values in the dictionary. Using this, we can access each value and add it to our total variable. At the end of our loop, we return the total.
+2. Even Keys
+
+Next, we are going to do something similar, but we are going to use the keys in order to retrieve the values. Additionally, we are going to only look at every even key within the dictionary. Here are the steps:
+
+    Define the function to accept one parameter for our dictionary
+    Create a variable to keep track of our sum
+    Loop through every key in the dictionary
+    Inside the loop, if the key is even, add the value from the even key
+    After the loop, return the sum
+
+Coding question
+Questions
+
+Create a function called sum_even_keys that takes a dictionary named my_dictionary, with all integer keys and values, as a parameter. This function should return the sum of the values of all even keys.
+
+# Write your max_key function here:
+def max_key(my_dictionary):
+  max_key = float("-inf")
+  max_value = float("-inf")
+  for key, value in my_dictionary.items():
+    if value > max_value:
+      max_value = value
+      max_key = key
+  return max_key
+# Uncomment these function calls to test your  function:
+print(max_key({1:100, 2:1, 3:4, 4:10}))
+# should print 1
+print(max_key({"a":100, "b":10, "c":1000}))
+# should print "c"
+
+Here is this solution:
+
+def max_key(my_dictionary):
+  largest_key = float("-inf")
+  largest_value = float("-inf")
+  for key, value in my_dictionary.items():
+    if value > largest_value:
+      largest_value = value
+      largest_key = key
+  return largest_key
+
+In order to program the max algorithm using dictionaries, we need to keep track of the max value and the key which is used to access it. We start by using float("-inf") in order to initialize them to the lowest possible value. To retrieve the key and value at the same time, we use the items() function. Inside our loop, we overwrite the current largest value and the key used to access whenever we find a larger value. We return the largest value’s key once we have iterated through the entire dictionary.

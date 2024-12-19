@@ -92,3 +92,119 @@ def exponents(bases, powers):
 
 #Uncomment the line below when your function is done
 print(exponents([2, 3, 4], [1, 2, 3]))
+
+# Write your sum_even_keys function here:
+def sum_even_keys(my_dictionary):
+  even_sum = 0
+  for key in my_dictionary.keys():
+    if key%2 == 0:
+      even_sum += my_dictionary[key]
+  return even_sum
+
+
+# Uncomment these function calls to test your  function:
+print(sum_even_keys({1:5, 2:2, 3:3}))
+# should print 2
+print(sum_even_keys({10:1, 100:2, 1000:3}))
+# should print 6
+
+Here is one solution:
+
+def sum_even_keys(my_dictionary):
+  total = 0
+  for key in my_dictionary.keys():
+    if key%2 == 0:
+      total += my_dictionary[key]
+  return total
+
+Similar to the previous problem, we are iterating through our dictionary, except this time we are iterating through the keys instead of the values. In order to get the keys we use the keys() function and to get the value of a key we can use brackets. To test if the key is even we use the modulus operator and test if the remainder is 0 when dividing by 2.
+3. Add Ten
+
+Let’s loop through the keys again, but this time let’s modify the values within the dictionary. Our function should add 10 to every value in the dictionary and return the modified dictionary. Here is what we need to do:
+
+    Define the function to accept one parameter for our dictionary
+    Loop through every key in the dictionary
+    Retrieve the value using the key and add 10 to it. Make sure to re-save the new value to the original key.
+    After the loop, return the modified dictionary
+
+Coding question
+Questions
+
+Create a function named add_ten that takes a dictionary with integer values named my_dictionary as a parameter. The function should add 10 to every value in my_dictionary and return my_dictionary
+
+# Write your add_ten function here:
+def add_ten(my_dictionary):
+  for key in my_dictionary.keys():
+    my_dictionary[key] += 10
+  return my_dictionary
+
+# Uncomment these function calls to test your  function:
+print(add_ten({1:5, 2:2, 3:3}))
+# should print {1:15, 2:12, 3:13}
+print(add_ten({10:1, 100:2, 1000:3}))
+# should print {10:11, 100:12, 1000:13}
+
+Here is how we did it:
+
+def add_ten(my_dictionary):
+  for key in my_dictionary.keys():
+    my_dictionary[key] += 10
+  return my_dictionary
+
+We use a for loop to iterate through each key and we access the value using the key. After accessing it, we overwrite the value with the value plus 10. Finally, we return the modified dictionary.
+
+4. Values That Are Keys
+
+We are making a program that will create a family tree. Using a dictionary, we want to return a list of all the children who are also parents of other children. Using dictionaries we can consider those people to be values which are also keys in our dictionary of family data. Here is what we need to do:
+
+    Define the function to accept one parameter for our dictionary
+    Create an empty list to hold the values we find
+    Loop through every value in the dictionary
+    Inside the loop, test if the current value is a key in the dictionary. If it is then append it to the list of values we found
+    After the loop, return the list of values which are also keys
+
+Coding question
+Questions
+
+Create a function named values_that_are_keys that takes a dictionary named my_dictionary as a parameter. This function should return a list of all values in the dictionary that are also keys.
+
+# Write your values_that_are_keys function here:
+def values_that_are_keys(my_dictionary):
+  my_list = []
+  for value in my_dictionary.values():
+    for key in my_dictionary.keys():
+      if value == key:
+        my_list.append(value)
+  return my_list
+# Uncomment these function calls to test your  function:
+print(values_that_are_keys({1:100, 2:1, 3:4, 4:10}))
+# should print [1, 4]
+print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
+# should print ["a"]
+
+Here is this solution:
+
+def values_that_are_keys(my_dictionary):
+  value_keys = []
+  for value in my_dictionary.values():
+    if value in my_dictionary:
+      value_keys.append(value)
+  return value_keys
+
+For this solution, we iterate through every value within the dictionary. In order to check if it is also a key, we can use the in keyword. This checks the value against all of the keys in the dictionary to see if it exists as a key as well. If it does, then we append it to our list of values which are also keys.
+5. Largest Value
+
+For the last challenge, we are going to create a function that is able to find the maximum value in the dictionary and return the associated key. This is a twist on the max algorithm since it is using a dictionary rather than a list. These are the steps:
+
+    Define the function to accept one parameter for our dictionary
+    Initialize the starting key to a very low number
+    Initialize the starting value to a very low number
+    Iterate through the dictionary’s key/value pairs.
+    Inside the loop, if the current value is larger than the current largest value, replace the largest key and largest value with the current ones you are looking at
+    Once you are done iterating through all key/value pairs, return the key which has the largest value
+
+Coding question
+Questions
+
+Write a function named max_key that takes a dictionary named my_dictionary as a parameter. The function should return the key associated with the largest value in the dictionary.
+
